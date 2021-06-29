@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081"
+        android:padding="15dp"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/foot_value"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_height"
+            android:hint="ft"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:textColorHighlight="@color/themeColor"
+            android:drawablePadding="15dp"
+            android:padding="10dp"
+            android:visibility="visible"/>
+
+        <!--        you have hardcoded text change them to @strings-->
+
+
+
+
+        <EditText
+            android:id="@+id/inch_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input"
+            android:hint="inch"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:textColorHighlight="@color/themeColor"
+            android:layout_marginStart="25dp"
+            android:padding="10dp"
+            android:visibility="visible"/>
+
+        <EditText
+            android:id="@+id/cm_value"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_height"
+            android:hint="CM"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:textColorHighlight="@color/themeColor"
+            android:drawablePadding="15dp"
+            android:padding="10dp"
+            android:visibility="gone"/>
+
+
+
+
+        <!--        you have hardcoded text change them to @strings-->
+
+        <Spinner
+            android:id="@+id/height_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_spinner"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292"
+        android:gravity="center_horizontal">
+
+    <EditText
+        android:id="@+id/weight_value"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_weighing_scale"
+        android:drawablePadding="15dp"
+        android:hint="weight"
+        android:inputType="numberDecimal"
+        android:lines="1"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHighlight="#7cff88"
+        android:textSize="25sp" />
+
+    <Spinner
+        android:id="@+id/weight_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_spinner"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/text_your_bmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:text="Your BMI is "
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/bmi_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:text="21"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/reset_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/healthy_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Healthy weight for your height is "
+            android:textSize="25sp"
+            android:visibility="invisible"
+            style="bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/healthy_weight_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                tools:text="50KG"
+                android:textSize="30sp"
+                style="bold"
+                android:textColor="@color/green"
+                android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/healthy_weight_and"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - "
+                android:textSize="30sp"
+                style="bold"
+                android:textColor="@color/green"
+                android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/healthy_weight_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                tools:text="70KG"
+                android:textSize="30sp"
+                style="bold"
+                android:textColor="@color/green"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="70dp"
+        android:background="@drawable/button_filled_gradient"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

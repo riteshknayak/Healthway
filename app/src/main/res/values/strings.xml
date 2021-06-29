@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Healthway</string>
+
+    <string-array name="height_unit">
+        <item>Ft+in</item>
+        <item>CM</item>
+    </string-array>
+
+    <string-array name="weight_unit">
+        <item>KG</item>
+        <item>Pound</item>
+    </string-array>
+
+</resources>
